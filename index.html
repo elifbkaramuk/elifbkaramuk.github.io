@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafıza Kart Oyunu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="start-screen" class="start-screen">
+        <h1 class="game-title">Hafıza Kart Oyunu</h1>
+        <div class="player-name-container">
+            <label for="player-name" class="player-name-label">Adınız:</label>
+            <input type="text" id="player-name" class="player-name-input" placeholder="Adınızı girin" required>
+        </div>
+        <div class="difficulty-container">
+            <label for="difficulty" class="difficulty-label">Seviye Seçin:</label>
+            <select id="difficulty" class="difficulty-select">
+                <option value="easy">Kolay</option>
+                <option value="medium">Orta</option>
+                <option value="hard">Zor</option>
+            </select>
+        </div>
+        <button id="start-button" class="start-button">Oyunu Başlat</button>
+    </div>
+    
+
+    <div id="game-container" class="game-container" style="display:none;">
+        <div id="timer" class="timer">Süre: 0</div>
+        <div id="score" class="score">Skor: 0</div>
+        <div id="game-board" class="game-board"></div>
+        <button id="pause-button" class="pause-button">Durdur</button> 
+    </div>
+
+    <div id="end-screen" class="end-screen" style="display: none;">
+        <h1 id="end-message"></h1>
+        <div id="leaderboard-container" class="leaderboard-container">
+            <h2>Liderlik Tablosu</h2>
+            <ul id="leaderboard-list" class="leaderboard-list"></ul>
+        </div>
+        <button id="restart-button" class="restart-button">Yeniden Başla</button>
+        <button id="back-to-home" class="back-to-home-button">Ana Sayfaya Dön</button>
+    </div>
+    
+
+    <div id="pause-screen" class="pause-screen" style="display: none;">
+        <h1>Oyun Durdu</h1>
+        <button id="resume-button" class="resume-button">Devam Et</button>
+        <button id="back-to-home-pause" class="back-to-home-button">Ana Sayfaya Dön</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
